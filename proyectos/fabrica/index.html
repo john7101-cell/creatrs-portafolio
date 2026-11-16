@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Telar Norte · Demo de Creatrs</title>
+<meta name="description" content="Proyecto conceptual de Creatrs: web B2B para una fábrica de confección con catálogo y formulario de cotización.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0b1f3a;--navy-2:#13315c;--teal:#14b8a6;--sky:#e6f1fb;--muted:#5b6b82;--line:#dbe4ef}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#f6f9fc;color:var(--navy);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.w{width:min(1160px,100% - 32px);margin-inline:auto}
+.demo{background:var(--teal);color:var(--navy);font-size:13px;text-align:center;padding:8px 16px;font-weight:600}
+.demo a{text-decoration:underline;font-weight:800}
+.top{background:var(--navy);color:#fff}
+nav{display:flex;justify-content:space-between;align-items:center;height:76px}
+.brand{font-family:'Space Grotesk';font-weight:700;font-size:24px;display:flex;gap:10px;align-items:center}
+.brand i{width:30px;height:30px;background:repeating-linear-gradient(45deg,var(--teal) 0 5px,transparent 5px 10px),var(--navy-2);border-radius:8px;display:inline-block}
+.links{display:flex;gap:30px;font-weight:600;color:#c9d6ea}
+.btn{display:inline-flex;gap:8px;align-items:center;justify-content:center;padding:14px 22px;border-radius:12px;font-weight:700;font-size:15px}
+.b1{background:var(--teal);color:var(--navy)}.b2{border:2px solid #4a6a95;color:#fff}.b3{background:var(--navy);color:#fff}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:64px 0 90px}
+.tag{display:inline-block;background:#13315c;color:#7ff0e2;font-weight:700;font-size:13px;padding:7px 14px;border-radius:8px}
+h1{font-family:'Space Grotesk';font-size:clamp(40px,5.6vw,70px);line-height:1.02;letter-spacing:-.03em;margin:18px 0}
+h1 em{font-style:normal;color:var(--teal)}
+.hero p{color:#c9d6ea;font-size:19px;max-width:540px;margin-bottom:30px}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.kpi{background:var(--navy-2);border:1px solid #24497d;border-radius:20px;padding:24px}
+.kpi b{font-family:'Space Grotesk';font-size:40px;display:block;color:#fff}
+.kpi span{color:#9fb3cf;font-size:14px}
+.kpi.big{grid-column:span 2;background:linear-gradient(135deg,var(--teal),#0e7490);border:0}
+.kpi.big b,.kpi.big span{color:var(--navy)}
+section{padding:90px 0}
+.eyebrow{font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#0e7490}
+h2{font-family:'Space Grotesk';font-size:clamp(32px,4.2vw,50px);line-height:1.05;letter-spacing:-.02em;margin:10px 0 14px}
+.lead{color:var(--muted);font-size:18px;max-width:640px}
+.lines{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.line{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.line .pic{height:150px;display:grid;place-items:center;font-size:64px}
+.line .tx{padding:20px 22px 24px}
+.line h3{font-family:'Space Grotesk';font-size:20px}
+.line p{color:var(--muted);font-size:14.5px;margin-top:6px}
+.proc{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:40px;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff}
+.st{padding:28px;border-right:1px solid var(--line)}
+.st:last-child{border-right:0}
+.st b{font-family:'Space Grotesk';color:var(--teal);font-size:30px}
+.st h3{font-size:18px;margin:6px 0}
+.st p{color:var(--muted);font-size:14.5px}
+.quote{background:var(--navy);color:#fff;border-radius:28px;padding:48px;display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}
+.quote h2{color:#fff}.quote .lead{color:#c9d6ea}
+form{display:grid;gap:14px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:grid;gap:6px;font-weight:600;font-size:14px;color:#c9d6ea}
+input,select,textarea{font:inherit;padding:13px 14px;border-radius:12px;border:1px solid #2c4f80;background:#10294d;color:#fff}
+.ok{list-style:none;display:grid;gap:12px;margin-top:24px}
+.ok li:before{content:"✓  ";color:var(--teal);font-weight:800}
+footer{padding:36px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:900px){.links{display:none}.hero,.quote{grid-template-columns:1fr}.lines{grid-template-columns:1fr 1fr}.proc{grid-template-columns:1fr 1fr}.st:nth-child(2){border-right:0}.st{border-bottom:1px solid var(--line)}.quote{padding:30px 20px}}
+@media(max-width:560px){.lines,.proc,.two{grid-template-columns:1fr}.st{border-right:0}nav .b1{display:none}.row .btn{flex:1}section{padding:64px 0}}
+</style>
+</head>
+<body>
+<div class="demo">Proyecto conceptual de <a href="../../index.html">Creatrs</a> · negocio ficticio creado para mostrar nuestro trabajo</div>
+<div class="top">
+  <div class="w">
+    <nav><a class="brand" href="#"><i></i>Telar Norte</a><div class="links"><a href="#lineas">Líneas</a><a href="#proceso">Proceso</a><a href="#cotizar">Cotizar</a></div><a class="btn b1" href="#cotizar">Solicitar cotización</a></nav>
+    <header class="hero">
+      <div>
+        <span class="tag">Maquila · Paquete completo · Dotaciones</span>
+        <h1>Fabricamos la ropa de tu marca, <em>a tiempo</em> y con calidad de exportación</h1>
+        <p>Planta de confección en el Valle de Aburrá para marcas de moda, empresas e instituciones educativas.</p>
+        <div class="row"><a class="btn b1" href="#cotizar">Cotizar producción</a><a class="btn b2" href="#lineas">Ver líneas</a></div>
+      </div>
+      <div class="kpis">
+        <div class="kpi big"><b>20.000</b><span>prendas al mes de capacidad</span></div>
+        <div class="kpi"><b>300</b><span>unidades de pedido mínimo</span></div>
+        <div class="kpi"><b>15 días</b><span>tiempo de muestra</span></div>
+      </div>
+    </header>
+  </div>
+</div>
+
+<section id="lineas">
+  <div class="w">
+    <span class="eyebrow">Líneas de producción</span>
+    <h2>Lo que fabricamos</h2>
+    <p class="lead">Desde el patronaje hasta el empaque. Tú pones la marca; nosotros, la producción.</p>
+    <div class="lines">
+      <article class="line"><div class="pic" style="background:#e6f1fb">👕</div><div class="tx"><h3>Camisetas y polos</h3><p>Algodón peinado, piqué y tejidos deportivos.</p></div></article>
+      <article class="line"><div class="pic" style="background:#e0f7f4">👔</div><div class="tx"><h3>Camisería</h3><p>Camisas de oficina y uniformes corporativos.</p></div></article>
+      <article class="line"><div class="pic" style="background:#fdf2e3">🧥</div><div class="tx"><h3>Chaquetas</h3><p>Rompevientos, chalecos y prendas acolchadas.</p></div></article>
+      <article class="line"><div class="pic" style="background:#efeafd">🎒</div><div class="tx"><h3>Uniformes escolares</h3><p>Sudaderas, jardineras y camisetas con escudo.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="proceso" style="padding-top:0">
+  <div class="w">
+    <span class="eyebrow">Proceso</span>
+    <h2>Tu pedido, paso a paso</h2>
+    <div class="proc">
+      <div class="st"><b>01</b><h3>Ficha técnica</h3><p>Recibimos tu diseño o lo desarrollamos contigo.</p></div>
+      <div class="st"><b>02</b><h3>Muestra</h3><p>Prenda física para aprobar tallas y acabados.</p></div>
+      <div class="st"><b>03</b><h3>Producción</h3><p>Corte, confección, bordado y control de calidad.</p></div>
+      <div class="st"><b>04</b><h3>Entrega</h3><p>Empaque con tu marca y despacho nacional.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="cotizar" style="padding-top:0">
+  <div class="w quote">
+    <div>
+      <span class="eyebrow" style="color:#7ff0e2">Cotización en 24 horas</span>
+      <h2>Cuéntanos qué necesitas producir</h2>
+      <p class="lead">Un asesor comercial te contacta con precios por volumen y tiempos de entrega.</p>
+      <ul class="ok"><li>Asesoría en telas e insumos</li><li>Precios por escala de producción</li><li>Fichas técnicas incluidas</li></ul>
+    </div>
+    <form onsubmit="event.preventDefault();alert('Demo: en la web real este formulario envía la cotización al equipo comercial.')">
+      <div class="two"><label>Empresa<input required placeholder="Nombre de tu marca"></label><label>Contacto<input required placeholder="Tu nombre"></label></div>
+      <div class="two"><label>Tipo de prenda<select><option>Camisetas y polos</option><option>Camisería</option><option>Chaquetas</option><option>Uniformes escolares</option></select></label><label>Cantidad<select><option>300 – 1.000</option><option>1.000 – 5.000</option><option>Más de 5.000</option></select></label></div>
+      <label>Detalles<textarea rows="4" placeholder="Tela, colores, tallas, fecha de entrega…"></textarea></label>
+      <button class="btn b1" type="submit">Enviar solicitud</button>
+    </form>
+  </div>
+</section>
+
+<footer><div class="w"><span>© Telar Norte — negocio ficticio</span><span>Diseño y desarrollo: <a href="../../index.html" style="text-decoration:underline">Creatrs</a></span></div></footer>
+</body>
+</html>

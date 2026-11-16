@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clínica Dental Alba · Demo de Creatrs</title>
+<meta name="description" content="Proyecto conceptual de Creatrs: web para una clínica dental con tratamientos, agenda de citas y preguntas frecuentes.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#0f766e;--mint:#ccfbf1;--soft:#f0fdfa;--ink:#0f2a2a;--muted:#55706e;--line:#d5ece8;--peach:#fb923c}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.w{width:min(1140px,100% - 32px);margin-inline:auto}
+.demo{background:var(--ink);color:var(--mint);font-size:13px;text-align:center;padding:8px 16px}
+.demo a{text-decoration:underline;font-weight:700}
+nav{display:flex;justify-content:space-between;align-items:center;height:76px}
+.brand{font-weight:800;font-size:22px;display:flex;align-items:center;gap:10px}
+.brand i{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 50% 40%,#fff 0 30%,transparent 31%),linear-gradient(135deg,var(--teal),#14b8a6);display:inline-block}
+.links{display:flex;gap:28px;font-weight:600;color:var(--muted)}
+.btn{display:inline-flex;gap:8px;align-items:center;justify-content:center;padding:14px 22px;border-radius:14px;font-weight:700;font-size:15px}
+.b1{background:var(--teal);color:#fff}.b2{background:var(--mint);color:var(--teal)}.wa{background:#25d366;color:#fff}
+.hero{background:linear-gradient(180deg,var(--soft),#fff);border-radius:36px;padding:56px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;margin-top:8px}
+.pill{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--line);padding:8px 14px;border-radius:999px;font-weight:700;font-size:13px;color:var(--teal)}
+h1{font-size:clamp(40px,5.6vw,68px);line-height:1.04;letter-spacing:-.035em;margin:18px 0}
+h1 em{font-style:normal;color:var(--teal)}
+.hero p{font-size:18.5px;color:var(--muted);max-width:520px;margin-bottom:28px}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.trust{display:flex;gap:26px;margin-top:30px;flex-wrap:wrap}
+.trust div b{display:block;font-size:24px;font-weight:800}
+.trust div span{font-size:13px;color:var(--muted)}
+.visual{position:relative;aspect-ratio:1}
+.circle{position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle at 30% 30%,#5eead4,var(--teal));display:grid;place-items:center;font-size:clamp(120px,16vw,200px);box-shadow:0 40px 70px -35px rgba(15,118,110,.8)}
+.float-card{position:absolute;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:0 18px 36px -18px rgba(15,42,42,.45);font-weight:700;font-size:14px}
+.float-card small{display:block;color:var(--muted);font-weight:600;font-size:12px}
+.fc1{left:-2%;top:12%}.fc2{right:-4%;bottom:14%}
+section{padding:88px 0}
+.eyebrow{font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}
+h2{font-size:clamp(32px,4.2vw,48px);line-height:1.06;letter-spacing:-.03em;margin:10px 0 12px}
+.lead{color:var(--muted);font-size:18px;max-width:620px}
+.treat{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+.t{border:1px solid var(--line);border-radius:22px;padding:26px;background:#fff;transition:.2s}
+.t:hover{border-color:var(--teal);transform:translateY(-3px)}
+.t .ic{width:52px;height:52px;border-radius:16px;background:var(--mint);display:grid;place-items:center;font-size:26px;margin-bottom:14px}
+.t h3{font-size:19px}
+.t p{color:var(--muted);font-size:14.5px;margin:6px 0 10px}
+.t b{color:var(--teal);font-size:14px}
+.book{background:var(--ink);color:#fff;border-radius:32px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.book h2{color:#fff}.book .lead{color:#a7c4c0}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0 22px}
+.slots button{font:inherit;font-weight:700;padding:12px;border-radius:12px;border:1px solid #2c4b4a;background:#163a3a;color:#fff;cursor:pointer}
+.slots button.on{background:var(--mint);color:var(--teal);border-color:var(--mint)}
+.days{display:flex;gap:10px;flex-wrap:wrap}
+.days span{background:#163a3a;border-radius:12px;padding:10px 14px;font-weight:700;font-size:14px}
+.days span.on{background:var(--peach);color:var(--ink)}
+.faq{max-width:820px;margin-top:30px;display:grid;gap:12px}
+details{border:1px solid var(--line);border-radius:16px;padding:18px 22px}
+summary{font-weight:700;cursor:pointer}
+details p{color:var(--muted);margin-top:8px}
+footer{background:var(--soft);padding:36px 0;color:var(--muted);font-size:14px;margin-top:40px}
+footer .w{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:900px){.links{display:none}.hero,.book{grid-template-columns:1fr;padding:32px 22px}.treat{grid-template-columns:1fr 1fr}.visual{max-width:360px;width:100%;margin-inline:auto}}
+@media(max-width:560px){.treat{grid-template-columns:1fr}nav .b1{display:none}.row .btn{flex:1}section{padding:64px 0}}
+</style>
+</head>
+<body>
+<div class="demo">Proyecto conceptual de <a href="../../index.html">Creatrs</a> · negocio ficticio creado para mostrar nuestro trabajo</div>
+<div class="w">
+  <nav><a class="brand" href="#"><i></i>Clínica Dental Alba</a><div class="links"><a href="#tratamientos">Tratamientos</a><a href="#agenda">Agenda</a><a href="#preguntas">Preguntas</a></div><a class="btn b1" href="#agenda">Agendar cita</a></nav>
+  <header class="hero">
+    <div>
+      <span class="pill">✨ Primera valoración sin costo</span>
+      <h1>Tu sonrisa, en <em>buenas manos</em></h1>
+      <p>Odontología general y estética con tecnología digital, sin dolor y con planes de pago que se ajustan a ti.</p>
+      <div class="row"><a class="btn b1" href="#agenda">Agendar valoración</a><a class="btn wa" href="#agenda">💬 Escribir por WhatsApp</a></div>
+      <div class="trust"><div><b>Lun – Sáb</b><span>Horario extendido</span></div><div><b>Rayos X</b><span>Digitales en el consultorio</span></div><div><b>Financiación</b><span>Planes de pago</span></div></div>
+    </div>
+    <div class="visual" aria-hidden="true">
+      <div class="circle">🦷</div>
+      <div class="float-card fc1">📅 Cita confirmada<small>Martes · 10:30 a. m.</small></div>
+      <div class="float-card fc2">⭐ Atención amable<small>Pacientes de todas las edades</small></div>
+    </div>
+  </header>
+</div>
+
+<section id="tratamientos">
+  <div class="w">
+    <span class="eyebrow">Tratamientos</span>
+    <h2>Todo para tu salud oral en un solo lugar</h2>
+    <p class="lead">Precios de referencia de este proyecto de demostración.</p>
+    <div class="treat">
+      <article class="t"><div class="ic">🪥</div><h3>Limpieza y profilaxis</h3><p>Remoción de placa y sarro, con revisión completa.</p><b>Desde $90.000</b></article>
+      <article class="t"><div class="ic">✨</div><h3>Blanqueamiento</h3><p>Resultados visibles desde la primera sesión.</p><b>Desde $450.000</b></article>
+      <article class="t"><div class="ic">😁</div><h3>Ortodoncia</h3><p>Brackets convencionales, de zafiro y alineadores.</p><b>Valoración gratis</b></article>
+      <article class="t"><div class="ic">🦷</div><h3>Diseño de sonrisa</h3><p>Carillas en resina o porcelana según tu caso.</p><b>Valoración gratis</b></article>
+      <article class="t"><div class="ic">🔩</div><h3>Implantes</h3><p>Recupera dientes perdidos con resultados naturales.</p><b>Valoración gratis</b></article>
+      <article class="t"><div class="ic">👶</div><h3>Odontopediatría</h3><p>Atención paciente y divertida para los más pequeños.</p><b>Desde $70.000</b></article>
+    </div>
+  </div>
+</section>
+
+<section id="agenda" style="padding-top:0">
+  <div class="w book">
+    <div>
+      <span class="eyebrow" style="color:#5eead4">Agenda en línea</span>
+      <h2>Reserva tu cita en 1 minuto</h2>
+      <p class="lead">Elige día y hora; te confirmamos por WhatsApp. En la web real, esta agenda se conecta con el calendario de la clínica.</p>
+    </div>
+    <div>
+      <div class="days"><span>Lun 23</span><span class="on">Mar 24</span><span>Mié 25</span><span>Jue 26</span></div>
+      <div class="slots" id="slots"><button>8:00</button><button>9:30</button><button class="on">10:30</button><button>2:00</button><button>3:30</button><button>5:00</button></div>
+      <a class="btn wa" href="#agenda" style="width:100%">💬 Confirmar por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section id="preguntas" style="padding-top:0">
+  <div class="w">
+    <span class="eyebrow">Preguntas frecuentes</span>
+    <h2>Resolvemos tus dudas</h2>
+    <div class="faq">
+      <details><summary>¿La primera valoración tiene costo?</summary><p>No. La valoración inicial y el plan de tratamiento son gratuitos.</p></details>
+      <details><summary>¿Atienden con seguro o medicina prepagada?</summary><p>En la web real aquí se listan los convenios de la clínica.</p></details>
+      <details><summary>¿Puedo pagar a cuotas?</summary><p>Sí, ofrecemos planes de pago para ortodoncia, implantes y diseño de sonrisa.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer><div class="w"><span>© Clínica Dental Alba — negocio ficticio</span><span>Diseño y desarrollo: <a href="../../index.html" style="text-decoration:underline">Creatrs</a></span></div></footer>
+<script>document.querySelectorAll('#slots button').forEach(function(b){b.onclick=function(){document.querySelectorAll('#slots button').forEach(function(x){x.classList.remove('on')});b.classList.add('on')}})</script>
+</body>
+</html>
