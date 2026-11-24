@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Estilo Oral · Odontología en Itagüí</title>
+<meta name="description" content="Odontología en Itagüí: valoración, limpieza, diseño de sonrisa y ortodoncia. Agenda tu valoración por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14213d;--mut:#5b6478;--bg:#fff;--soft:#f3f8f8;--acc:#0e9f9a;--acc2:#f28b45;--line:#e3ecec;--wa:#1fa855}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.6 "Plus Jakarta Sans",system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.aviso{background:#14213d;color:#fff;font-size:13px;text-align:center;padding:8px 16px}
+.aviso b{color:#ffd2b3}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{font-weight:800;font-size:22px;letter-spacing:-.5px;text-decoration:none}
+.logo span{color:var(--acc)}.logo i{font-style:normal;color:var(--acc2)}
+.menu{display:flex;gap:26px;font-size:15px;font-weight:500}
+.menu a{text-decoration:none;color:var(--mut)}.menu a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--wa);color:#fff;text-decoration:none;font-weight:700;padding:12px 20px;border-radius:999px;font-size:15px;white-space:nowrap}
+.btn.alt{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+.btn svg{width:18px;height:18px;fill:currentColor}
+.hero{background:linear-gradient(160deg,#eaf7f6 0%,#fff 55%,#fff4ec 100%)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding-top:64px;padding-bottom:72px}
+.tag{display:inline-block;background:#fff;border:1px solid var(--line);color:var(--acc);font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px}
+h1{font-size:clamp(34px,5vw,54px);line-height:1.08;letter-spacing:-1.5px;margin:16px 0}
+h1 em{font-style:normal;color:var(--acc)}
+.lead{font-size:18px;color:var(--mut);max-width:520px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.datos{display:flex;gap:28px;margin-top:36px;flex-wrap:wrap}
+.datos div{font-size:14px;color:var(--mut)}.datos b{display:block;font-size:22px;color:var(--ink)}
+.tarjeta-hero{background:#fff;border-radius:28px;box-shadow:0 30px 60px -25px rgba(20,33,61,.25);padding:28px;position:relative}
+.sonrisa{aspect-ratio:4/3;border-radius:20px;background:radial-gradient(circle at 30% 30%,#bfeeea,#0e9f9a);display:grid;place-items:center}
+.sonrisa svg{width:58%;height:auto}
+.agenda{margin-top:18px;display:grid;gap:10px}
+.slot{display:flex;justify-content:space-between;align-items:center;border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:14px}
+.slot b{color:var(--acc)}
+.flot{position:absolute;right:-14px;top:-14px;background:var(--acc2);color:#fff;font-weight:700;font-size:13px;padding:8px 14px;border-radius:999px;box-shadow:0 10px 20px -8px rgba(242,139,69,.7)}
+section{padding:80px 0}
+.titulo{text-align:center;max-width:640px;margin:0 auto 44px}
+.titulo h2{font-size:clamp(28px,3.6vw,40px);letter-spacing:-1px;margin:8px 0}
+.titulo p{color:var(--mut);margin:0}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.serv{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px;transition:.2s}
+.serv:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(20,33,61,.3)}
+.ico{width:48px;height:48px;border-radius:14px;background:var(--soft);display:grid;place-items:center;margin-bottom:16px}
+.ico svg{width:26px;height:26px;stroke:var(--acc);fill:none;stroke-width:1.8}
+.serv h3{margin:0 0 6px;font-size:18px}.serv p{margin:0;color:var(--mut);font-size:15px}
+.serv a{display:inline-block;margin-top:14px;font-weight:700;font-size:14px;color:var(--acc);text-decoration:none}
+.compromiso{background:var(--soft)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.paso{background:#fff;border-radius:22px;padding:28px}
+.paso .n{width:40px;height:40px;border-radius:50%;background:var(--acc);color:#fff;font-weight:800;display:grid;place-items:center;margin-bottom:14px}
+.paso h3{margin:0 0 6px}.paso p{margin:0;color:var(--mut)}
+.ubic .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.mapa{border-radius:24px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3}
+.mapa iframe{width:100%;height:100%;border:0}
+.lista{list-style:none;padding:0;margin:22px 0}
+.lista li{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.lista b{min-width:110px}
+.final{background:linear-gradient(135deg,var(--acc),#0b7f7b);color:#fff;border-radius:32px;padding:56px 32px;text-align:center}
+.final h2{font-size:clamp(28px,3.6vw,40px);margin:0 0 10px;letter-spacing:-1px}
+.final p{opacity:.9;margin:0 0 26px}
+.final .btn{background:#fff;color:var(--ink)}
+footer{padding:36px 0;color:var(--mut);font-size:14px;text-align:center}
+.wa-flot{position:fixed;right:20px;bottom:20px;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(31,168,85,.8);z-index:20}
+.wa-flot svg{width:30px;height:30px;fill:#fff}
+@media (max-width:900px){
+ .menu{display:none}
+ .hero .wrap,.ubic .wrap{grid-template-columns:1fr}
+ .grid4{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr}
+ .tarjeta-hero{max-width:440px}
+}
+@media (max-width:560px){
+ .grid4{grid-template-columns:1fr}
+ .nav .btn{padding:10px 14px;font-size:14px}
+ section{padding:60px 0}
+ .hero .wrap{padding-top:40px}
+ .flot{right:10px}
+}
+</style>
+</head>
+<body>
+<div class="aviso">Muestra preparada por <b>Creatrs</b> para Estilo Oral · Textos, servicios y fotos se ajustan con ustedes</div>
+
+<header><div class="wrap nav">
+  <a class="logo" href="#">Sonri<span>esthetic</span><i>.</i></a>
+  <nav class="menu"><a href="#servicios">Servicios</a><a href="#agenda">Cómo agendar</a><a href="#ubicacion">Ubicación</a></nav>
+  <a class="btn" href="https://wa.me/573104532876?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>Agendar cita</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <span class="tag">Odontología · Itagüí</span>
+    <h1>Tu sonrisa en <em>buenas manos</em>, cerca de ti.</h1>
+    <p class="lead">Atención cercana y profesional en Itagüí. Te explicamos cada opción antes de empezar. Agenda por WhatsApp y recibe la confirmación de tu cita el mismo día.</p>
+    <div class="ctas">
+      <a class="btn" href="https://wa.me/573104532876?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Agendar valoración</a>
+      <a class="btn alt" href="#servicios">Ver tratamientos</a>
+    </div>
+    <div class="datos">
+      <div><b>4,7 ★</b>122 reseñas en Google</div>
+      <div><b>Itagüí</b>Cra. 49 #48A-14</div>
+      <div><b>WhatsApp</b>respuesta el mismo día</div>
+    </div>
+  </div>
+  <div class="tarjeta-hero">
+    <span class="flot">Agenda confirmada ✓</span>
+    <div class="sonrisa"><svg viewBox="0 0 200 120"><path d="M20 40c25 55 135 55 160 0" fill="#fff" stroke="#fff" stroke-width="6" stroke-linecap="round"/><path d="M45 52h110" stroke="#0e9f9a" stroke-width="3"/><g stroke="#0e9f9a" stroke-width="3"><path d="M68 52v26"/><path d="M90 52v32"/><path d="M110 52v32"/><path d="M132 52v26"/></g></svg></div>
+    <div class="agenda">
+      <div class="slot">Valoración estética <b>Mañana · 10:00 a. m.</b></div>
+      <div class="slot">Diseño de sonrisa <b>Jueves · 3:00 p. m.</b></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="servicios"><div class="wrap">
+  <div class="titulo"><span class="tag">Tratamientos</span><h2>Lo que hacemos por tu sonrisa</h2><p>Cada tratamiento empieza con una valoración para explicarte opciones, tiempos y costos antes de iniciar.</p></div>
+  <div class="grid4">
+    <div class="serv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3c-4 0-6 3-6 6 0 5 2 12 3.5 12S11 15 12 15s1 6 2.5 6S18 14 18 9c0-3-2-6-6-6Z"/></svg></div><h3>Valoración y limpieza</h3><p>Revisión completa, limpieza profesional y un plan claro con costos desde el inicio.</p><a href="https://wa.me/573104532876?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20valoraci%C3%B3n%20y%20limpieza" target="_blank" rel="noopener">Preguntar →</a></div>
+    <div class="serv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 9c3 6 15 6 18 0"/><path d="M7 11v3M12 12v4M17 11v3"/></svg></div><h3>Diseño de sonrisa</h3><p>Resinas y carillas para armonizar forma, tamaño y color de tus dientes.</p><a href="https://wa.me/573104532876?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20dise%C3%B1o%20de%20sonrisa" target="_blank" rel="noopener">Preguntar →</a></div>
+    <div class="serv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12h18"/><rect x="5" y="9" width="4" height="6" rx="1"/><rect x="15" y="9" width="4" height="6" rx="1"/></svg></div><h3>Ortodoncia</h3><p>Brackets y alineadores para corregir la posición de tus dientes.</p><a href="https://wa.me/573104532876?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20ortodoncia" target="_blank" rel="noopener">Preguntar →</a></div>
+    <div class="serv"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div><h3>Blanqueamiento</h3><p>Dientes varios tonos más claros, con control de sensibilidad.</p><a href="https://wa.me/573104532876?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20blanqueamiento" target="_blank" rel="noopener">Preguntar →</a></div>
+  </div>
+</div></section>
+
+<section id="agenda" class="compromiso"><div class="wrap">
+  <div class="titulo"><span class="tag">Cómo agendar</span><h2>Tu cita, clara desde el primer mensaje</h2><p>Sin llamadas en espera: todo queda por escrito en WhatsApp.</p></div>
+  <div class="grid3">
+    <div class="paso"><div class="n">1</div><h3>Escríbenos</h3><p>Toca "Agendar cita" y cuéntanos qué tratamiento te interesa.</p></div>
+    <div class="paso"><div class="n">2</div><h3>Elige tu horario</h3><p>Te enviamos los espacios disponibles y confirmamos tu cita por escrito.</p></div>
+    <div class="paso"><div class="n">3</div><h3>Recordatorio</h3><p>Un día antes te recordamos la hora y la dirección para que llegues tranquilo.</p></div>
+  </div>
+</div></section>
+
+<section id="ubicacion" class="ubic"><div class="wrap">
+  <div>
+    <span class="tag">Ubicación</span>
+    <h2 style="font-size:clamp(28px,3.6vw,40px);letter-spacing:-1px;margin:10px 0">Estamos en Itagüí</h2>
+    <ul class="lista">
+      <li><b>Dirección</b><span>Carrera 49 #48A-14, Itagüí</span></li>
+      <li><b>WhatsApp</b><span>310 453 2876</span></li>
+      <li><b>Horario</b><span>Consulta la disponibilidad por WhatsApp</span></li>
+    </ul>
+    <a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=Estilo+Oral+Carrera+49+%2348A-14%2C+Itag%C3%BC%C3%AD" target="_blank" rel="noopener">Cómo llegar en Google Maps</a>
+  </div>
+  <div class="mapa"><iframe loading="lazy" title="Mapa Estilo Oral" src="https://maps.google.com/maps?q=Estilo+Oral+Carrera+49+%2348A-14%2C+Itag%C3%BC%C3%AD&z=16&output=embed"></iframe></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="final">
+    <h2>¿Lista o listo para tu nueva sonrisa?</h2>
+    <p>Agenda tu valoración hoy y recibe la confirmación por WhatsApp.</p>
+    <a class="btn" href="https://wa.me/573104532876?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener">Agendar por WhatsApp</a>
+  </div>
+</div></section>
+
+<footer>© 2026 Estilo Oral · Carrera 49 #48A-14, Itagüí<br>Muestra diseñada por Creatrs · john7101-cell.github.io/creatrs-portafolio</footer>
+
+<a class="wa-flot" href="https://wa.me/573104532876?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg></a>
+</body>
+</html>
